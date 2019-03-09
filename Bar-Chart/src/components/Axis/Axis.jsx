@@ -4,7 +4,7 @@ import { select as d3Select } from "d3-selection";
 
 import "./Axis.css";
 
-class Axis extends Component {
+export default class Axis extends Component {
   componentDidMount() {
     this.renderAxis();
   }
@@ -12,6 +12,7 @@ class Axis extends Component {
   componentDidUpdate() {
     this.renderAxis();
   }
+
   renderAxis() {
     const axisType = `axis${this.props.orient}`;
     const axis = d3Axis[axisType]()
@@ -19,9 +20,10 @@ class Axis extends Component {
       .tickSize(-this.props.tickSize)
       .tickPadding([12])
       .ticks([4]);
-       
+
     d3Select(this.axisElement).call(axis);
   }
+
   render() {
     return (
       <g
@@ -34,5 +36,3 @@ class Axis extends Component {
     );
   }
 }
-
-export default Axis;

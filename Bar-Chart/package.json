@@ -1,8 +1,13 @@
 {
-  "name": "d3deneme",
-  "version": "0.1.0",
-  "private": true,
+  "name": "badass-chart",
+  "version": "1.0.0",
   "devDependencies": {
+    "eslint": "^3.11.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.8.0",
+    "gh-pages": "^0.12.0",
     "react-scripts": "0.8.2"
   },
   "dependencies": {
@@ -16,16 +21,18 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "deploy": "yarn run build && gh-pages -d build",
+    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "description": "Bad Ass chart built with React and D3 v4.",
+  "keywords": [
+    "React",
+    "d3",
+    "svg",
+    "chart"
+  ],
+  "author": "Kacper Golinski <kacper.golinski@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://caspg.github.io/badass-chart"
 }
